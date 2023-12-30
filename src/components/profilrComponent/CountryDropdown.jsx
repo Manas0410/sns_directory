@@ -1,21 +1,19 @@
 // CountryDropdown.jsx
 
-import React, { useState, useEffect } from 'react';
-import './styles/CountryDropdown.css'; // Import the CSS file for styling
+import React, { useState, useEffect } from "react";
+import "./styles/CountryDropdown.css"; // Import the CSS file for styling
 
-const CountryDropdown = ({setZone}) => {
+const CountryDropdown = ({ setZone }) => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
     // Fetch data from the API
-    fetch('http://worldtimeapi.org/api/timezone')
-      .then(response => response.json())
-      .then(data => {
-        // Extract country names from timezone strings
-        // const countryNames = data.map(timezone => timezone.split('/')[1]);
+    fetch("http://worldtimeapi.org/api/timezone")
+      .then((response) => response.json())
+      .then((data) => {
         setCountries(data);
       })
-      .catch(error => console.error('Error fetching data:', error));
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   return (
@@ -23,7 +21,14 @@ const CountryDropdown = ({setZone}) => {
       <button>Choose Country</button>
       <div className="dropdown-content">
         {countries.map((country, index) => (
-          <div key={index} onClick={()=>{setZone(country)}}>{country.split('/')[1]}</div>
+          <div
+            key={index}
+            onClick={() => {
+              setZone(country);
+            }}
+          >
+            {country.split("/")[1]}
+          </div>
         ))}
       </div>
     </div>
