@@ -1,8 +1,16 @@
 /* CountryDropdown.css */
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+   display: flex;
+   align-items: center;
+}
+
+.country-dropdown{
+    border-radius: 8px;
+    padding: 0.6em;
+    font-size: 0.9em;
+    font-weight: 500;
+    font-family: inherit;
 }
 
 .dropdown button {

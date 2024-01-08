@@ -18,19 +18,20 @@ const CountryDropdown = ({ setZone }) => {
 
   return (
     <div className="dropdown">
-      <button>Choose Country</button>
-      <div className="dropdown-content">
+      {/* <button>Choose Country</button> */}
+      <select className="country-dropdown">
+        <option >Choose Country</option>
         {countries.map((country, index) => (
-          <div
+          <option
             key={index}
             onClick={() => {
               setZone(country);
             }}
           >
             {country.split("/")[1]}
-          </div>
+          </option>
         ))}
-      </div>
+     </select>
     </div>
   );
 };

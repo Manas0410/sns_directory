@@ -1,0 +1,29 @@
+.user-detail-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 26px;
+    align-items: center;
+}
+
+.detail-page{
+    padding: 12px;
+}
+
+.counter-watch-wrapper{
+    display: flex;
+    gap: 12px;
+}
+
+.user-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile{
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ada2a2;
+    background-color: #f1f8fb;
+    box-shadow: 10px 5px 5px rgb(249, 249, 249);
+    margin: 26px;
+}

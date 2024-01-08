@@ -4,6 +4,7 @@ import UserDirectory from "./components/directoryHomePage/HomePage";
 import CountryDropdown from "./components/profilrComponent/CountryDropdown";
 import WatchComponent from "./components/profilrComponent/Clock";
 import UserProfile from "./components/profilrComponent/Profile";
+import "./index.css"
 
 const router = createBrowserRouter([
   {

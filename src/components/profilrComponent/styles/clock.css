@@ -2,23 +2,27 @@
 
 .watch-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin-top: 20px;
 }
 
 .watch {
-    font-size: 2em;
+    padding: 0.3em;
+    border-radius: 1px solid red;
+    font-size: 1em;
     margin-bottom: 10px;
+    margin-top: 8px;
+    background-color:#efcdda;
 }
 
 .button-container {
     display: flex;
     gap: 10px;
+    margin-left: 12px;
 }
 
 button {
-    padding: 10px;
-    font-size: 1em;
+    font-size: 0.8em;
     cursor: pointer;
+    
 }

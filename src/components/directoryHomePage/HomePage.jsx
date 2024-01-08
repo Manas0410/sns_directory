@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import "../common.css";
+import "./homePage.css";
 
 // Component for the user directory
 const UserDirectory = () => {
@@ -12,20 +14,23 @@ const UserDirectory = () => {
       .then(response => setUsers(response.data))
       .catch(error => console.error('Error fetching users', error));
   }, []);
-console.log(users)
+
   return (
-    <div>
-      <h1>User Directory</h1>
-      <ul>
+    <div className='home-page'>
+      <div className='page-title'>User Directory</div>
+      <div className='card-list'>
         {users.map(user => (
-          <li key={user.id}>
+          <div key={user.id}>
             {/* Link to the user's profile page */}
             <Link to={`/profile/${user.id}`}>
-              {user.name} - {user.postsCount || 0} posts
+              <div className='user-card'>
+                <div>{user.name}</div>
+                <div>{user.postsCount || 10} posts</div>
+              </div>
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
